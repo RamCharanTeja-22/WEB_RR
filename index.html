@@ -125,8 +125,8 @@
         }
 
         function loadContent(topic) {
-            // Use the full URL of your backend hosted on Render
-            fetch(`https://ram3-m4m4.onrender.com/content/${topic}`)
+            // Updated the backend URL to the one deployed on Render
+            fetch(`https://ram5.onrender.com/content/${topic}`)
                 .then(response => response.json())
                 .then(data => {
                     const explanationDiv = document.getElementById("explanation");
