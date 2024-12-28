@@ -125,7 +125,8 @@
         }
 
         function loadContent(topic) {
-            fetch(`/content/${topic}`)
+            // Use the full URL of your backend hosted on Render
+            fetch(`https://ram3-m4m4.onrender.com/content/${topic}`)
                 .then(response => response.json())
                 .then(data => {
                     const explanationDiv = document.getElementById("explanation");
@@ -146,6 +147,9 @@
                         }
                     }, 200);
                     document.getElementById("content-box").classList.remove("hidden");
+                })
+                .catch(error => {
+                    console.error('Error fetching content:', error);
                 });
         }
 
